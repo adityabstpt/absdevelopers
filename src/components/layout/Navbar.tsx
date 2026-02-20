@@ -63,12 +63,12 @@ export function Navbar() {
                 <Container className="flex items-center justify-between">
                     {/* Logo */}
                     <Link href="/" className="flex items-center gap-3 group">
-                        <div className="w-14 h-14 relative flex-shrink-0">
+                        <div className="w-16 h-12 relative flex-shrink-0 overflow-hidden rounded-md">
                             <Image
                                 src="/images/blue_logo.jpg"
                                 alt="Aditya Building Solutions Logo"
                                 fill
-                                className="object-contain"
+                                className="object-cover object-center scale-150"
                                 priority
                             />
                         </div>
