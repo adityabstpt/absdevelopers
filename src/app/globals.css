@@ -1,26 +1,82 @@
 @import "tailwindcss";
 
 :root {
+  /* Brand Colors */
+  --color-primary: #FF6B35;
+  --color-primary-dark: #E85A2D;
+  --color-primary-light: #FF8C5A;
+  --color-secondary: #FFB800;
+  --color-secondary-dark: #E6A300;
+  --color-navy: #0F1624;
+  --color-navy-light: #1A2438;
+  --color-navy-mid: #232E45;
+
+  /* Neutral Colors */
+  --neutral-50: #F8F9FA;
+  --neutral-100: #F2F4F7;
+  --neutral-150: #EBF0F5;
+  --neutral-200: #E0E6EF;
+  --neutral-400: #9AA5B8;
+  --neutral-500: #6B778D;
+  --neutral-800: #2D3748;
+  --neutral-900: #1A202C;
+
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: var(--color-navy);
+
+  /* Blueprint grid pattern - subtle graph paper feel for engineering brand */
+  --blueprint-grid: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Cdefs%3E%3Cpattern id='grid' width='40' height='40' patternUnits='userSpaceOnUse'%3E%3Cpath d='M 40 0 L 0 0 0 40' fill='none' stroke='rgba(255,255,255,0.04)' stroke-width='1'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='url(%23grid)'/%3E%3C/svg%3E");
+  --blueprint-grid-dark: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Cdefs%3E%3Cpattern id='grid' width='40' height='40' patternUnits='userSpaceOnUse'%3E%3Cpath d='M 40 0 L 0 0 0 40' fill='none' stroke='rgba(15,22,36,0.06)' stroke-width='1'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='url(%23grid)'/%3E%3C/svg%3E");
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@theme {
+  --font-sans: var(--font-inter), sans-serif;
+  --font-heading: var(--font-poppins), sans-serif;
+  --font-accent: var(--font-archivo), sans-serif;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  letter-spacing: -0.03em;
+}
+
+/* Section label style */
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--color-primary);
+  font-weight: 600;
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.section-label::before {
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 2px;
+  background: var(--color-primary);
+  flex-shrink: 0;
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
