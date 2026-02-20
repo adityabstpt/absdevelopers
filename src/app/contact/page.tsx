@@ -137,12 +137,13 @@ export default function ContactPage() {
                             <div className="h-[300px] w-full bg-gray-200 rounded-2xl overflow-hidden shadow-md relative">
                                 {/* Embed Google Map here. Using placeholder for now */}
                                 <iframe
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3877.123456789!2d79.4192!3d13.6288!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTPCsDM3JzQzLjciTiA3OcKwMjUnMDkuMSJF!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin"
+                                    src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3877.207109372213!2d79.42464807508827!3d13.645161986735658!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTPCsDM4JzQyLjYiTiA3OcKwMjUnMzguMCJF!5e0!3m2!1sen!2sin!4v1771615492779!5m2!1sen!2sin"
                                     width="100%"
                                     height="100%"
                                     style={{ border: 0 }}
                                     allowFullScreen
                                     loading="lazy"
+                                    referrerPolicy="no-referrer-when-downgrade"
                                     title="Google Maps Location"
                                     className="grayscale hover:grayscale-0 transition-all duration-500"
                                 ></iframe>
