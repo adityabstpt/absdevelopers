@@ -32,7 +32,7 @@ export default function AboutPage() {
                                 Founded in 2015, Aditya Building Solutions began with a simple mission: to build structures that stand the test of time while building relationships that last a lifetime.
                             </p>
                             <p className="text-[var(--neutral-800)] text-lg mb-6 leading-relaxed">
-                                Over the past 10 years, we have grown from a small consultancy firm to a full-fledged construction and development company, delivering over 100+ successful projects across Tirupati and surrounding regions.
+                                Over the past 10 years, we have evolved into a premier construction and development powerhouse, successfully delivering over 100+ landmark projects across Tirupati and the surrounding regions.
                             </p>
 
                             <div className="flex gap-4 mt-8">
