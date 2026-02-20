@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { MapPin, Phone, Mail, Facebook, Instagram, Linkedin } from "lucide-react";
 
@@ -36,11 +37,13 @@ export function Footer() {
                     <div className="lg:col-span-1">
                         {/* Logo */}
                         <div className="flex items-center gap-3 mb-6">
-                            <div
-                                className="w-10 h-10 flex items-center justify-center font-black text-white text-sm"
-                                style={{ background: "linear-gradient(135deg, var(--color-primary), var(--color-secondary))", fontFamily: "var(--font-heading)" }}
-                            >
-                                ABS
+                            <div className="w-12 h-12 relative flex-shrink-0 bg-white p-1 rounded-md">
+                                <Image
+                                    src="/images/blue_logo.jpg"
+                                    alt="Aditya Building Solutions Logo"
+                                    fill
+                                    className="object-contain"
+                                />
                             </div>
                             <div>
                                 <p className="font-bold text-white text-sm" style={{ fontFamily: "var(--font-heading)" }}>Aditya Building Solutions</p>

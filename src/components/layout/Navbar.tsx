@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -62,14 +63,14 @@ export function Navbar() {
                 <Container className="flex items-center justify-between">
                     {/* Logo */}
                     <Link href="/" className="flex items-center gap-3 group">
-                        <div
-                            className="w-9 h-9 flex items-center justify-center font-black text-white text-sm transition-all duration-200"
-                            style={{
-                                background: "linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%)",
-                                fontFamily: "var(--font-heading)",
-                            }}
-                        >
-                            ABS
+                        <div className="w-11 h-11 relative flex-shrink-0">
+                            <Image
+                                src="/images/blue_logo.jpg"
+                                alt="Aditya Building Solutions Logo"
+                                fill
+                                className="object-contain"
+                                priority
+                            />
                         </div>
                         <div className="flex flex-col leading-tight">
                             <span className="text-sm font-bold" style={{ color: "var(--color-navy)", fontFamily: "var(--font-heading)" }}>
