@@ -106,20 +106,8 @@ export default function AboutPage() {
                         </h2>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
-                        {/* Team Member 1 */}
-                        <div className="bg-white p-6 rounded-xl shadow-md text-center border-t-4 border-[var(--color-primary)] group hover:-translate-y-2 transition-transform duration-300">
-                            <div className="w-32 h-32 mx-auto bg-[var(--neutral-100)] rounded-full mb-6 flex items-center justify-center overflow-hidden">
-                                <Users className="w-12 h-12 text-[var(--neutral-400)]" />
-                            </div>
-                            <h3 className="text-xl font-bold text-[var(--color-navy)]">Aditya Varma</h3>
-                            <p className="text-[var(--color-primary)] font-medium mb-3">Founder & CEO</p>
-                            <p className="text-sm text-[var(--neutral-800)]">
-                                Civil Engineer with 10+ years of experience in construction management and structural design.
-                            </p>
-                        </div>
-
-                        {/* Team Member 2 */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto items-center">
+                        {/* Team Member 1 - Left (Senior Engineer) */}
                         <div className="bg-white p-6 rounded-xl shadow-md text-center border-t-4 border-[var(--color-secondary)] group hover:-translate-y-2 transition-transform duration-300">
                             <div className="w-32 h-32 mx-auto bg-[var(--neutral-100)] rounded-full mb-6 flex items-center justify-center overflow-hidden">
                                 <Users className="w-12 h-12 text-[var(--neutral-400)]" />
@@ -131,7 +119,22 @@ export default function AboutPage() {
                             </p>
                         </div>
 
-                        {/* Team Member 3 */}
+                        {/* Team Member 2 - Center (Founder & CEO) - Elevated */}
+                        <div className="bg-white p-8 rounded-xl shadow-xl text-center border-t-4 border-[var(--color-primary)] lg:scale-105 z-10 group hover:-translate-y-2 transition-transform duration-300 relative">
+                            <div className="absolute top-0 right-0 p-3 flex opacity-20">
+                                <Award className="w-8 h-8 text-[var(--color-primary)]" />
+                            </div>
+                            <div className="w-36 h-36 mx-auto bg-[var(--neutral-100)] rounded-full mb-6 flex items-center justify-center overflow-hidden border-4 border-white shadow-sm">
+                                <Users className="w-14 h-14 text-[var(--neutral-400)]" />
+                            </div>
+                            <h3 className="text-2xl font-bold text-[var(--color-navy)]">Narendra Babu M</h3>
+                            <p className="text-[var(--color-primary)] font-bold tracking-wide uppercase text-sm mb-4">Founder & CEO</p>
+                            <p className="text-sm text-[var(--neutral-800)] leading-relaxed">
+                                Civil Engineer with 10+ years of experience in construction management and structural design. Leading ABS with a vision for excellence.
+                            </p>
+                        </div>
+
+                        {/* Team Member 3 - Right (Design Head) */}
                         <div className="bg-white p-6 rounded-xl shadow-md text-center border-t-4 border-[var(--color-primary)] group hover:-translate-y-2 transition-transform duration-300">
                             <div className="w-32 h-32 mx-auto bg-[var(--neutral-100)] rounded-full mb-6 flex items-center justify-center overflow-hidden">
                                 <Users className="w-12 h-12 text-[var(--neutral-400)]" />
