@@ -37,7 +37,7 @@ export function Footer() {
                     <div className="lg:col-span-1">
                         {/* Logo */}
                         <div className="flex items-center gap-3 mb-6">
-                            <div className="w-12 h-12 relative flex-shrink-0 bg-white p-1 rounded-md">
+                            <div className="w-16 h-16 relative flex-shrink-0 bg-white p-1 rounded-md">
                                 <Image
                                     src="/images/blue_logo.jpg"
                                     alt="Aditya Building Solutions Logo"
