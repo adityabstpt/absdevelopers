@@ -42,7 +42,7 @@ export function Footer() {
                                     src="/images/blue_logo.jpg"
                                     alt="Aditya Building Solutions Logo"
                                     fill
-                                    className="object-cover object-center scale-[1.35]"
+                                    className="object-cover object-center scale-[1.3]"
                                 />
                             </div>
                             <div>

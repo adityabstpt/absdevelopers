@@ -68,7 +68,7 @@ export function Navbar() {
                                 src="/images/blue_logo.jpg"
                                 alt="Aditya Building Solutions Logo"
                                 fill
-                                className="object-cover object-center scale-[1.35]"
+                                className="object-cover object-center scale-[1.2]"
                                 priority
                             />
                         </div>
