@@ -6,7 +6,6 @@ const stats = [
     { value: "10+", label: "Years of Experience", suffix: "" },
     { value: "100+", label: "Projects Completed", suffix: "" },
     { value: "AMIE", label: "Engineer Certified", suffix: "" },
-    { value: "5/5", label: "Client Satisfaction", suffix: "" },
 ];
 
 export function StatsSection() {
@@ -20,7 +19,7 @@ export function StatsSection() {
             }}
         >
             <Container>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-0">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-0">
                     {stats.map((stat, i) => (
                         <div
                             key={i}

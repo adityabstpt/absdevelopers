@@ -4,6 +4,7 @@ import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { CheckCircle2, ArrowRight } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 const highlights = [
     "AMIE-certified civil engineers on every project",
@@ -20,20 +21,21 @@ export function AboutPreview() {
 
                     {/* Left: Image + Badge */}
                     <div className="relative">
-                        {/* Main image placeholder */}
+                        {/* Main image */}
                         <div
-                            className="relative aspect-[4/3] rounded-sm overflow-hidden"
+                            className="relative aspect-square rounded-sm overflow-hidden"
                             style={{
-                                background: "linear-gradient(135deg, var(--neutral-150) 0%, var(--neutral-200) 100%)",
                                 boxShadow: "0 32px 64px -12px rgba(15,22,36,0.18)"
                             }}
                         >
-                            <div className="absolute inset-0 flex items-center justify-center"
-                                style={{ backgroundImage: "var(--blueprint-grid-dark)" }}>
-                                <span className="text-[var(--neutral-400)] font-medium text-sm">Project Image</span>
-                            </div>
+                            <Image
+                                src="/images/1.jpg"
+                                alt="ABS Construction Project"
+                                fill
+                                className="object-cover"
+                            />
                             {/* Inner accent border */}
-                            <div className="absolute inset-4 border border-[var(--color-primary)]/20 rounded-sm pointer-events-none" />
+                            <div className="absolute inset-4 border border-white/20 rounded-sm pointer-events-none z-10" />
                         </div>
 
                         {/* 10-year badge */}
