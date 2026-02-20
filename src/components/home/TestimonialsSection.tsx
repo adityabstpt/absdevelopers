@@ -1,7 +1,7 @@
 "use client";
 
 import { Container } from "@/components/ui/Container";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight, Star } from "lucide-react";
 
@@ -35,6 +35,13 @@ export function TestimonialsSection() {
 
     const prev = () => setCurrent((c) => (c - 1 + total) % total);
     const next = () => setCurrent((c) => (c + 1) % total);
+
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setCurrent((c) => (c + 1) % total);
+        }, 5000);
+        return () => clearInterval(timer);
+    }, [total]);
 
     return (
         <section
