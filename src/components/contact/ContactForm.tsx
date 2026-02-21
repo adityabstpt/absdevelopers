@@ -16,18 +16,23 @@ export function ContactForm() {
         // Set email subject
         formData.append("subject", "New Contact Form Submission from ABS Website");
 
+        // Convert FormData to JSON object
+        const object = Object.fromEntries(formData);
+        const json = JSON.stringify(object);
+
         try {
             const res = await fetch("https://api.web3forms.com/submit", {
                 method: "POST",
                 headers: {
+                    "Content-Type": "application/json",
                     "Accept": "application/json",
                 },
-                body: formData,
+                body: json,
             });
 
             const data = await res.json();
 
-            if (res.ok && data.success) {
+            if (res.status === 200 && data.success) {
                 setStatus("success");
                 e.currentTarget.reset();
                 setTimeout(() => setStatus("idle"), 5000);
