@@ -19,14 +19,20 @@ export function ContactForm() {
         try {
             const res = await fetch("https://api.web3forms.com/submit", {
                 method: "POST",
+                headers: {
+                    "Accept": "application/json",
+                },
                 body: formData,
             });
 
-            if (res.ok) {
+            const data = await res.json();
+
+            if (res.ok && data.success) {
                 setStatus("success");
                 e.currentTarget.reset();
                 setTimeout(() => setStatus("idle"), 5000);
             } else {
+                console.error("Web3Forms Error:", data);
                 setStatus("error");
                 setTimeout(() => setStatus("idle"), 5000);
             }
