@@ -11,30 +11,37 @@ export function ContactForm() {
         setStatus("submitting");
 
         const formData = new FormData(e.currentTarget);
+        // Added the Web3Forms access key
         formData.append("access_key", "32b7a6a7-a916-4080-a707-0a9c0ae91799");
+        // Set email subject
         formData.append("subject", "New Contact Form Submission from ABS Website");
+
+        const object = Object.fromEntries(formData);
+        const json = JSON.stringify(object);
 
         try {
             const res = await fetch("https://api.web3forms.com/submit", {
                 method: "POST",
                 headers: {
-                    "Accept": "application/json",
+                    "Content-Type": "application/json",
+                    Accept: "application/json"
                 },
-                body: formData,
+                body: json
             });
 
             const data = await res.json();
 
-            if (res.status === 200) {
+            if (data.success) {
                 setStatus("success");
                 e.currentTarget.reset();
                 setTimeout(() => setStatus("idle"), 5000);
             } else {
-                console.error("Web3Forms Error:", data);
+                console.error("Web3Forms API Error:", data);
                 setStatus("error");
                 setTimeout(() => setStatus("idle"), 5000);
             }
         } catch (error) {
+            console.error("Web3Forms Catch Error:", error);
             setStatus("error");
             setTimeout(() => setStatus("idle"), 5000);
         }
