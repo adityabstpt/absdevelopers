@@ -1,6 +1,6 @@
 import { PageHero } from "@/components/ui/PageHero";
 import { Container } from "@/components/ui/Container";
-import { Button } from "@/components/ui/Button";
+import { ContactForm } from "@/components/contact/ContactForm";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 
 export const metadata = {
@@ -27,67 +27,7 @@ export default function ContactPage() {
                             <h2 className="text-3xl font-bold text-[var(--color-navy)] mb-6 font-[family-name:var(--font-heading)]">
                                 Start Your Project Today
                             </h2>
-                            <form className="space-y-6">
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                    <div className="space-y-2">
-                                        <label htmlFor="name" className="text-sm font-medium text-[var(--neutral-800)]">Name</label>
-                                        <input
-                                            type="text"
-                                            id="name"
-                                            className="w-full px-4 py-3 rounded-lg border border-[var(--neutral-200)] focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] focus:border-transparent transition-all"
-                                            placeholder="Your Name"
-                                        />
-                                    </div>
-                                    <div className="space-y-2">
-                                        <label htmlFor="phone" className="text-sm font-medium text-[var(--neutral-800)]">Phone</label>
-                                        <input
-                                            type="tel"
-                                            id="phone"
-                                            className="w-full px-4 py-3 rounded-lg border border-[var(--neutral-200)] focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] focus:border-transparent transition-all"
-                                            placeholder="Your Phone Number"
-                                        />
-                                    </div>
-                                </div>
-
-                                <div className="space-y-2">
-                                    <label htmlFor="email" className="text-sm font-medium text-[var(--neutral-800)]">Email</label>
-                                    <input
-                                        type="email"
-                                        id="email"
-                                        className="w-full px-4 py-3 rounded-lg border border-[var(--neutral-200)] focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] focus:border-transparent transition-all"
-                                        placeholder="your.email@example.com"
-                                    />
-                                </div>
-
-                                <div className="space-y-2">
-                                    <label htmlFor="service" className="text-sm font-medium text-[var(--neutral-800)]">Service Interested In</label>
-                                    <select
-                                        id="service"
-                                        className="w-full px-4 py-3 rounded-lg border border-[var(--neutral-200)] focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] focus:border-transparent transition-all bg-white"
-                                    >
-                                        <option value="">Select a Service</option>
-                                        <option value="building">Building Construction</option>
-                                        <option value="consulting">Consulting</option>
-                                        <option value="development">Land Development</option>
-                                        <option value="interior">Interior Design</option>
-                                        <option value="other">Other</option>
-                                    </select>
-                                </div>
-
-                                <div className="space-y-2">
-                                    <label htmlFor="message" className="text-sm font-medium text-[var(--neutral-800)]">Message</label>
-                                    <textarea
-                                        id="message"
-                                        rows={4}
-                                        className="w-full px-4 py-3 rounded-lg border border-[var(--neutral-200)] focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] focus:border-transparent transition-all"
-                                        placeholder="Tell us about your project requirements..."
-                                    ></textarea>
-                                </div>
-
-                                <Button size="lg" fullWidth className="text-lg">
-                                    Send Message
-                                </Button>
-                            </form>
+                            <ContactForm />
                         </div>
 
                         {/* Contact Info & Map */}
